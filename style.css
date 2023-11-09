@@ -20,6 +20,11 @@ body {
     font-family: sans-serif;
     background-color: var(--bg);
 }
+h1 {
+    margin: 30px 0 0;
+    font-size: 30px;
+    color: var(--text);
+}
 p {
     margin: 5px 0;
 }
@@ -32,7 +37,7 @@ p {
 #content {
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    padding: 40px 0;
+    padding: 20px 0 40px;
 }
 #content.genres {
     display: block;

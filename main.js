@@ -2,8 +2,8 @@ var o = {
     init() {
         console.log('NETFLIX APP READY');
         this.content = document.getElementById('content');
+        this.title = document.getElementById('title');
         this.options = options;
-
         this.result = '';
 
         this.moviesURL = 'https://unogs-unogs-v1.p.rapidapi.com/search/titles?order_by=date&type=movie';
@@ -42,6 +42,8 @@ var o = {
         }
     },
     async displayMovies(data) {
+        this.title.innerHTML = '';
+        this.title.innerHTML = 'Movies';
         this.content.innerHTML = '';
         let html = '';
         data.forEach(movie => {
@@ -63,6 +65,8 @@ var o = {
         this.content.innerHTML = html;
     },
     async displayGenres(data) {
+        this.title.innerHTML = '';
+        this.title.innerHTML = 'Genres';
         this.content.innerHTML = '';
         this.content.classList.add('genres');
         let html = '';
